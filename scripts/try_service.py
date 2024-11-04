@@ -6,13 +6,16 @@ import os
 def main():
     url = 'http://0.0.0.0:8503/pix2text'
 
-    image_fp = 'docs/examples/page2.png'
+    #image_fp = 'docs/examples/page2.png'
     #image_fp = 'docs/examples/en1.jpg'
     #image_fp = 'docs/examples/mixed.jpg'
     #image_fp = 'docs/examples/math-formula-42.png'
     #image_fp = 'docs/examples/english.jpg'
+    #image_fp = 'docs/examples/test-doc.pdf'
+    image_fp = 'docs/examples/mathpage.jpg'
     data = {
         "file_type": "page",
+        "language": "ru",
         "resized_shape": 768,
         "embed_sep": " $,$ ",
         "isolated_sep": "$$\n, \n$$"

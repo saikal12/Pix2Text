@@ -56,7 +56,7 @@ def main():
 
     formulas = process_text_with_pix2text()
 
-    combined_text = f"{russian_text}\n\nФормулы:\n" + '\n'.join([f['text'] for f in formulas])
+    combined_text = replace_formulas_in_text(russian_text,formulas)
     image_name = os.path.splitext(os.path.basename(image_fp))[0]
     md_file_name = f"{image_name}.md"
     md_file_path = os.path.join("output", md_file_name)
